@@ -1,0 +1,18 @@
+package com.company;
+
+public interface Intf {
+    // powerOn
+    // callSomeone
+    // answerCall
+    // phoneNumber
+    // isRinging
+
+    void powerOn();
+    void phoneNumber(String Number);
+    void answerCall();
+    boolean isRinging();
+    void callmyNumber(String Number);
+
+    void rejectCall();
+    
+}
