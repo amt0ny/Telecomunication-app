@@ -1,0 +1,18 @@
+
+public class Main {
+
+    public static void main(String[] args) {
+        Deskphone Dp = new Deskphone("92121");
+//        Dp.powerOn();
+//        Dp.callmyNumber("92121");
+//        Dp.rejectCall();
+
+        Mobilephone mp = new Mobilephone("91111");
+//        mp.callmyNumber("91111");
+//        mp.isRinging();
+//        mp.answerCall();
+//        mp.rejectCall();
+//        mp.isRinging();
+    }
+
+}
