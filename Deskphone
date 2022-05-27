@@ -1,0 +1,70 @@
+package com.company;
+
+public class Deskphone implements Intf {
+
+    private String MyNumber;
+    private boolean isRinging;
+
+    public Deskphone(String Mynumber){
+        this.MyNumber = Mynumber;
+    }
+
+    @Override
+    public void powerOn() {
+        System.out.println("Always Powered");
+    }
+
+    @Override
+    public void phoneNumber(String Number) {
+        if (MyNumber == Number){
+            System.out.println("Deskphone is Ringing");
+            isRinging = true;
+        }
+        else {
+            System.out.println("phone");
+        }
+    }
+
+    @Override
+    public void answerCall() {
+        if (isRinging == true){
+            System.out.println("Call Accepted");
+        }
+    }
+
+    @Override
+    public boolean isRinging() {
+        if (isRinging == true){
+            System.out.println("Deskphone is ringing");
+            return true;
+        }
+        System.out.println("Deskphone is not ringing");
+        return false;
+    }
+
+    @Override
+    public void callmyNumber(String Number) {
+        if (MyNumber == Number){
+            isRinging = true;
+            System.out.println("Deskphone is ringing");
+        }
+        else {
+            System.out.println("Check your number again or maybe Deskphone is not powered");
+        }
+    }
+
+
+    @Override
+    public void rejectCall() {
+        if(isRinging == true){
+            System.out.println("Call rejected");
+            isRinging = false;
+            System.out.println("Ringing Stop");
+        }
+        else {
+            System.out.println("Deskphone is not ringing");
+        }
+
+
+    }
+}
